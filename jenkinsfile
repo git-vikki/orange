@@ -1,0 +1,15 @@
+pipeline 
+{
+  agent any
+stages{
+stage('branch main') 
+    {
+        when {
+            branch "main"
+        }
+        steps {
+          sh '''#!/bin/bash -l
+          echo 'main branch'
+        }
+    }
+  }
